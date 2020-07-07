@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pmb.general.common.interfaces.repository.mysql.ConstantMapper">
+    <sql id="query_columns">
+        id,param_type,param_key,param_value,create_time,update_time
+    </sql>
+
+    <sql id="modify_columns">
+     param_type,param_key,param_value
+    </sql>
+
+    <insert id="replaceInto" parameterType="com.pmb.general.common.domain.DO.ParamConfigDO">
+        replace into m_param_config (<include refid="modify_columns"/>) values
+        (#{paramType},#{paramKey},#{paramValue})
+    </insert>
+    <select id="queryList" resultType="com.pmb.general.common.domain.DO.ParamConfigDO">
+        select <include refid="query_columns"/> from m_param_config
+    </select>
+</mapper>

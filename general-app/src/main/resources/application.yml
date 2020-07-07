@@ -1,0 +1,18 @@
+server:
+    port: 8088
+    tomcat:
+      max-connections: 300
+      max-threads: 1000
+    servlet:
+      context-path:
+
+spring:
+    datasource:
+      mysql:
+        jdbc-url: 
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: 
+        password: 
+cors:
+  allowedorigins: "*"
+
