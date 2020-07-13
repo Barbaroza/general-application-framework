@@ -1,0 +1,9 @@
+.idea/
+general-app/target/general-app-1.0.0.jar
+general-app/target/
+general-common/target/
+general-core/target/
+general-repository/target/
+general-web/target/
+general-core/general-core.iml
+general-common/general-common.iml
